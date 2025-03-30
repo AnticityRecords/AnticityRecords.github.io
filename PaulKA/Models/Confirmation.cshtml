@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Payment Confirmation";
+}
+
+<header class="payment-header">
+    <h1>Thank You!</h1>
+</header>
+
+<main>
+    <section class="confirmation-section">
+        <h2>Payment Successful</h2>
+        <p>Your license has been purchased successfully. You can now download your track or continue browsing our catalog.</p>
+        <a href="@Url.Action("Index", "MusicCatalog")" class="button">Back to Catalog</a>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 Paul K.A. Professional Music Production. All rights reserved.</p>
+</footer>

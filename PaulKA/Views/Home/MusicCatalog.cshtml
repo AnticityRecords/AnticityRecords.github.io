@@ -1,0 +1,107 @@
+﻿@model MusicCatalogViewModel
+
+<header class="catalog-header">
+    <h1>Music Catalog</h1>
+    <p>Manage and display your music catalog using CSV files. Play songs directly from the catalog.</p>
+</header>
+
+<nav>
+    <ul class="nav-links">
+        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li><a asp-controller="Home" asp-action="Licensing">Licensing</a></li>
+        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+        <li><a asp-controller="Home" asp-action="About">About</a></li>
+    </ul>
+</nav>
+
+<main>
+    <!-- CSV Upload Section -->
+    <section class="upload-section">
+        <h2>Upload Catalog CSV</h2>
+        <form asp-controller="Music" asp-action="UploadCatalog" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="CsvFile">Upload a CSV file:</label>
+                <input type="file" id="CsvFile" name="CsvFile" accept=".csv" required />
+                <span asp-validation-for="CsvFile" class="text-danger"></span>
+            </div>
+            <button type="submit" class="button">Upload CSV</button>
+        </form>
+    </section>
+
+    <!-- Catalog Table with Audio Players -->
+    <section class="catalog-table">
+        <h2>Music Catalog</h2>
+        @if (Model.Songs.Any())
+        {
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Play</th>
+                            <th>Artist</th>
+                            <th>Album</th>
+                            <th>Title</th>
+                            <th>Duration</th>
+                            <th>BPM</th>
+                            <th>Key</th>
+                            <th>Time Signature</th>
+                            <th>Genre</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var song in Model.Songs)
+                        {
+                            <tr>
+                                <!-- Playable Audio -->
+                                <td>
+                                    @if (!string.IsNullOrEmpty(song.AudioFileName))
+                                    {
+                                        <audio controls style="width: 150px;">
+                                            <source src="/audio/@song.AudioFileName" type="audio/mpeg">
+                                            Your browser does not support the audio element.
+                                        </audio>
+                                    }
+                                    else
+                                    {
+                                        <span class="text-muted">No audio available</span>
+                                    }
+                                </td>
+
+                                <!-- Song Details -->
+                                <td>@song.Artist</td>
+                                <td>@song.Album</td>
+                                <td>@song.Title</td>
+                                <td>@song.Duration</td>
+                                <td>@song.BPM</td>
+                                <td>@song.Key</td>
+                                <td>@song.TimeSignature</td>
+                                <td>@song.Genre</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <!-- No Songs Available -->
+            <p class="no-data">No songs in the catalog. Upload a CSV file to populate the catalog.</p>
+        }
+    </section>
+
+    <!-- Additional Information -->
+    @if (!Model.Songs.Any())
+    {
+        <section class="info-section">
+            <h3>How to Use:</h3>
+            <ul class="instructions">
+                <li>The uploaded CSV file should include columns: Artist, Album, Title, Duration, BPM, Key, Time Signature, Genre, and Audio File.</li>
+                <li>The "Audio File" column should contain the filename of the corresponding audio file (e.g., "track1.mp3").</li>
+                <li>Place audio files in the "wwwroot/audio/" folder.</li>
+            </ul>
+        </section>
+    }
+</main>
+@section Styles {
+    <link rel="stylesheet" href="/css/MusicCatalog.css" />
+}

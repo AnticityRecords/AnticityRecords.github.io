@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<header class="contact-header">
+    <h1>Contact Us</h1>
+</header>
+
+<nav>
+    <ul class="nav-links">
+        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li><a asp-controller="Home" asp-action="Licensing">Licensing</a></li>
+        <li><a asp-controller="Home" asp-action="MusicCatalog">Music Catalog</a></li>
+        <li><a asp-controller="Home" asp-action="About">About</a></li>
+        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <h2>Get in Touch</h2>
+        <p>We’d love to hear from you! Fill out the form below, and we’ll get back to you as soon as possible.</p>
+
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Social Media Links Section -->
+    <section class="social-media-section">
+        <h2>Follow Us on Social Media</h2>
+        <p>Stay connected with us for updates, news, and more!</p>
+        <div class="social-media-links">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/PaulKASynth" target="_blank">
+                <img src="/images/Facebook.jpg" alt="Follow us on Facebook" />
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/paul_k.a/" target="_blank">
+                <img src="/images/Instagram.jpg" alt="Follow us on Instagram" />
+            </a>
+
+            <!-- TikTok -->
+            <!-- TikTok -->
+            <a href="@ViewBag.saulbefore" target="_blank">
+                <img src="/images/TikTok.jpg" alt="TikTok Icon" />
+            </a>
+
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2025 Paul K.A. Professional Music Production. All rights reserved.</p>
+</footer>
+
+@section Styles {
+    <link rel="stylesheet" href="/css/contact.css" />
+}

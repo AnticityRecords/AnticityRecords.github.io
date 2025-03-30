@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Admin Tools";
+}
+
+<h1>Admin Tools</h1>
+
+<div>
+    <!-- Music Catalog Uploader -->
+    <section>
+        <h2>Music Catalog Uploader</h2>
+        <form id="musicCatalogForm" method="post" enctype="multipart/form-data" action="/AdminTools/UploadMusicCatalog">
+            <input type="file" name="csvFile" accept=".csv" />
+            <button type="submit">Upload Music Catalog CSV</button>
+        </form>
+    </section>
+
+    <hr />
+
+    <!-- Song Uploader -->
+    <section>
+        <h2>Song File Uploader</h2>
+        <form id="songUploaderForm" method="post" enctype="multipart/form-data" action="/AdminTools/UploadSong">
+            <input type="file" name="songFile" accept=".mp3,.wav,.aac" />
+            <button type="submit">Upload Song File</button>
+        </form>
+    </section>
+
+    <hr />
+
+    <!-- Video Uploader/Converter -->
+    <section>
+        <h2>Video Uploader and Converter</h2>
+        <form id="videoUploaderForm" method="post" enctype="multipart/form-data" action="/AdminTools/UploadAndConvertVideo">
+            <input type="file" name="videoFile" accept=".mp4,.avi,.mkv,.mov" />
+            <button type="submit">Upload & Convert Video</button>
+        </form>
+    </section>
+
+    <hr />
+
+    <!-- Contracts Viewer -->
+    <section>
+        <h2>Filled-Out Contracts Viewer</h2>
+        <form id="contractsViewerForm">
+            <select id="contractsDropdown" name="contractId">
+                @foreach (var contract in ViewBag.Contracts as List<Contract>)
+                {
+                    <option value="@contract.Id">@contract.Name</option>
+                }
+            </select>
+            <button type="button" onclick="viewContract()">View Contract</button>
+        </form>
+
+        <!-- Contract Viewer -->
+        <iframe id="contractViewerIframe" src="" width="100%" height="600px"></iframe>
+    </section>
+
+    <hr />
+
+    <!-- Analytics Dashboard -->
+    <section>
+        <h2>Analytics Dashboard</h2>
+        <iframe src="/analytics-dashboard-url" width="100%" height="600px"></iframe>
+    </section>
+</div>
+
+<script>
+    // JavaScript for viewing contracts
+    function viewContract() {
+        const dropdown = document.getElementById("contractsDropdown");
+        const iframe = document.getElementById("contractViewerIframe");
+        const selectedContractId = dropdown.value;
+
+        if (selectedContractId) {
+            iframe.src = `/AdminTools/ViewContract/${selectedContractId}`;
+        } else {
+            alert("Please select a contract to view.");
+        }
+    }
+</script>

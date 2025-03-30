@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Licensing Options";
+}
+
+<!-- Licensing Header -->
+<header class="licensing-header">
+    <h1>Licensing Options</h1>
+</header>
+
+<main class="licensing-content">
+    <section class="license-options">
+        <!-- Standard License -->
+        <div class="license-card">
+            <h3>Standard License</h3>
+            <p class="price">$149</p>
+            <ul>
+                <li>Non-commercial use only</li>
+                <li>Limited distribution rights</li>
+                <li>No monetization allowed</li>
+            </ul>
+            <a href="@Url.Action("Contract", "Contract", new { licenseType = "Standard" })" class="button">Buy Now</a>
+        </div>
+
+        <!-- Professional License -->
+        <div class="license-card">
+            <h3>Professional License</h3>
+            <p class="price">$299</p>
+            <ul>
+                <li>Commercial use allowed</li>
+                <li>Streaming platforms supported</li>
+                <li>Medium-scale distribution rights</li>
+            </ul>
+            <a href="@Url.Action("Contract", "Contract", new { licenseType = "Professional" })" class="button">Buy Now</a>
+        </div>
+
+        <!-- Commercial License -->
+        <div class="license-card">
+            <h3>Commercial License</h3>
+            <p class="price">$599</p>
+            <ul>
+                <li>Unlimited commercial use</li>
+                <li>National TV and theatrical releases allowed</li>
+                <li>Unlimited worldwide distribution rights</li>
+            </ul>
+            <a href="@Url.Action("Contract", "Contract", new { licenseType = "Commercial" })" class="button">Buy Now</a>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <p>© 2025 - PaulKA Music Licensing. All rights reserved.</p>
+        <p>
+            <a href="/Home/Privacy">Privacy Policy</a> |
+            <a href="/Home/Contact">Contact Us</a>
+        </p>
+    </div>
+</footer>
+
+@section Styles {
+    <link rel="stylesheet" href="/css/licensing.css">
+}

@@ -1,0 +1,114 @@
+﻿@{
+    ViewData["Title"] = "License Contract";
+}
+
+<header class="contract-header">
+    <h1>@ViewBag.LicenseType License Agreement</h1>
+</header>
+
+<main class="contract-content">
+    <section class="contract-text">
+        <h2>Agreement Terms</h2>
+        <p>This **License Agreement** ("Agreement") is entered into as of [Insert Date] by and between:</p>
+        <ul>
+            <li><strong>Licensor:</strong> [Your Company Name or Artist Name]</li>
+            <li><strong>Licensee:</strong> [Customer Name]</li>
+        </ul>
+
+        <p>The Parties agree to the following terms and conditions:</p>
+
+        <!-- Contract Details Based on License Type -->
+        @if (ViewBag.LicenseType == "Standard")
+        {
+            <h3>1. Grant of Rights</h3>
+            <p>The Licensor hereby grants the Licensee a non-exclusive, non-transferable license to use the licensed music solely for non-commercial purposes, including personal projects, student films, or limited online distribution. The Licensee shall not monetize or distribute the music beyond the agreed scope.</p>
+
+            <h3>2. Restrictions</h3>
+            <p>
+                The Licensee shall not:
+                <ul>
+                    <li>Use the licensed music for commercial purposes.</li>
+                    <li>Alter, remix, or create derivative works of the licensed music without prior written consent from the Licensor.</li>
+                    <li>Transfer or sublicense rights granted under this Agreement to any third party.</li>
+                </ul>
+            </p>
+
+            <h3>3. Term and Termination</h3>
+            <p>This Agreement shall remain valid for a period of one year from the date of execution. Either Party may terminate this Agreement in case of a breach of its terms.</p>
+        }
+        else if (ViewBag.LicenseType == "Professional")
+        {
+            <h3>1. Grant of Rights</h3>
+            <p>The Licensor hereby grants the Licensee a non-exclusive license to use the licensed music for commercial purposes, including but not limited to streaming platforms (e.g., YouTube, Spotify) and medium-scale distribution (e.g., apps, indie films).</p>
+
+            <h3>2. Territory</h3>
+            <p>This Agreement permits usage within [Insert Geographical Scope]. Any use outside this territory shall constitute a breach of this Agreement.</p>
+
+            <h3>3. Royalties and Compensation</h3>
+            <p>The Licensee agrees to pay a one-time fee of $299 for this license. No additional royalties will be owed unless otherwise negotiated in writing.</p>
+
+            <h3>4. Indemnification</h3>
+            <p>The Licensee agrees to indemnify and hold harmless the Licensor from any claims arising out of misuse or unauthorized use of the licensed music.</p>
+        }
+        else if (ViewBag.LicenseType == "Commercial")
+        {
+            <h3>1. Grant of Rights</h3>
+            <p>The Licensor hereby grants the Licensee an exclusive worldwide license to use the licensed music for unlimited commercial purposes, including national TV commercials, theatrical releases, AAA video game soundtracks, and unlimited distribution rights worldwide.</p>
+
+            <h3>2. Exclusivity Clause</h3>
+            <p>The Licensor agrees not to grant any other licenses for the same music during the term of this Agreement.</p>
+
+            <h3>3. Alteration Rights</h3>
+            <p>The Licensee may alter or remix the licensed music as needed for their projects, provided that attribution is given to the Licensor in all public-facing materials.</p>
+
+            <h3>4. Governing Law</h3>
+            <p>This Agreement shall be governed by and construed in accordance with the laws of [Insert Jurisdiction]. Any disputes arising under this Agreement shall be resolved exclusively in [Insert Jurisdiction].</p>
+        }
+    </section>
+
+    <!-- Signature Form -->
+    <form asp-controller="Contract" asp-action="SignContract" method="post">
+        <input type="hidden" name="licenseType" value="@ViewBag.LicenseType" />
+
+        <!-- Signature Field -->
+        <div class="form-group">
+            <label for="signature">Sign Here:</label><br />
+            <input type="text" id="signature" name="signature" placeholder="Enter your full name" required />
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="button">Sign Contract</button>
+    </form>
+</main>
+
+@section Styles {
+    <style>
+        .contract-header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .contract-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .contract-text {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .button {
+            background-color: #6c63ff;
+            color: white;
+            padding: 10px 20px;
+        }
+
+            .button:hover {
+                background-color: #5448d4;
+            }
+    </style>
+}

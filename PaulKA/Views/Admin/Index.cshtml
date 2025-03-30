@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<header class="admin-header">
+    <h1>Welcome to the Admin Dashboard</h1>
+</header>
+
+<main>
+    <section>
+        <h2>Admin Tools</h2>
+        <ul>
+            <li><a asp-controller="Home" asp-action="Index">View Website</a></li>
+            <li><a asp-controller="Admin" asp-action="ManageUsers">Manage Users</a></li>
+            <li><a asp-controller="Admin" asp-action="Settings">Settings</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Paul K.A. Professional Music Production. All rights reserved.</p>
+</footer>

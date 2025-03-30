@@ -1,0 +1,148 @@
+﻿/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color for readability */
+}
+
+/* Gradient Header Styling */
+.catalog-header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #6c63ff, #3f3d56); /* Stylish gradient */
+    color: white; /* Ensure text is readable */
+}
+
+    .catalog-header h1 {
+        font-size: 2.8em; /* Larger font size for emphasis */
+        margin-bottom: 10px;
+    }
+
+    .catalog-header p {
+        font-size: 1.5em; /* Subtitle or description text */
+    }
+
+/* Navigation Links */
+.nav-links {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center navigation links horizontally */
+}
+
+    .nav-links li {
+        margin: 0 15px;
+    }
+
+        .nav-links li a {
+            color: #e0e0e0; /* Light text color for links */
+            text-decoration: none;
+            transition: color 0.3s ease; /* Smooth hover effect */
+        }
+
+            .nav-links li a:hover {
+                color: #6c63ff; /* Accent color on hover */
+            }
+
+/* Upload Section Styling */
+.upload-section {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #1e1e1e; /* Slightly lighter dark gray */
+    border-radius: 8px;
+}
+
+    .upload-section h2 {
+        font-size: 1.8em;
+    }
+
+    .upload-section .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .upload-section label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .upload-section input[type='file'] {
+        width: 100%;
+        padding: 0.5rem;
+        background-color: #2d2d2d;
+        border-radius: 4px;
+    }
+
+    .upload-section .button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: #6c63ff; /* Accent color for button */
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        .upload-section .button:hover {
+            background-color: #5448d4; /* Slightly darker shade on hover */
+        }
+
+/* Table Styling */
+.catalog-table {
+    margin-top: 2rem;
+}
+
+.table-responsive {
+    overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse; /* Remove gaps between table borders */
+}
+
+    .table th,
+    .table td {
+        padding: 12px;
+        text-align: left; /* Align text to the left for readability */
+    }
+
+    .table th {
+        background-color: #2d2d2d; /* Darker header row */
+    }
+
+    .table tr:nth-child(even) {
+        background-color: #1a1a1a; /* Alternate row colors for better readability */
+    }
+
+    .table tr:hover {
+        background-color: #2a2a2a; /* Highlight row on hover */
+    }
+
+/* Audio Player Styling */
+audio {
+    max-width: 200px; /* Limit audio player width */
+}
+
+/* No Data Message Styling */
+.no-data {
+    text-align: center;
+}
+
+/* Additional Information Section Styling */
+.info-section h3 {
+    font-size: 1.5em;
+}
+
+.instructions li {
+    margin-bottom: 0.5rem; /* Add spacing between list items */
+}
+
+/* Hover Effects for Table Rows and Buttons */
+.table tr:hover td,
+.table tr:hover th,
+.upload-section .button:hover {
+    box-shadow: inset -3px -3px rgba(255,255,255,.6), inset -3px -3px rgba(255,255,255,.6);
+}
+
+/* Responsive Design Adjustments*/

@@ -1,0 +1,99 @@
+﻿/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color for readability */
+}
+
+/* Gradient Header Styling */
+.contact-header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #6c63ff, #E03FD8); /* Gradient background */
+}
+
+    .contact-header h1 {
+        font-size: 2.8em; /* Larger font size for emphasis */
+        color: white;
+    }
+
+/* Navigation Links */
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center navigation links horizontally */
+}
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+        nav ul li a {
+            color: #e0e0e0; /* Light text color for links */
+            text-decoration: none;
+        }
+
+            nav ul li a:hover {
+                color: #6c63ff; /* Accent color on hover */
+            }
+
+/* Contact Form Section */
+.contact-form-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+    .contact-form-section h2 {
+        font-size: 2em; /* Bold section heading */
+    }
+
+    .contact-form-section p {
+        font-size: 1.3em; /* Larger paragraph text for readability */
+    }
+
+.contact-form {
+    max-width: 600px; /* Limit form width for readability */
+    margin: auto; /* Center the form horizontally */
+}
+
+    .contact-form label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%; /* Full width inputs and textarea */
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+/.contact-form button {
+    display: inline-block;
+    padding: 12px 24px;
+}
+
+/* Social Media Links Section */
+.social-media-section {
+    text-align: center;
+}
+
+    .social-media-section h2 {
+        font-size: 2em; /* Bold section heading */
+    }
+
+.social-media-links {
+    display: flex; /* Display icons in a row */
+    justify-content: center; /* Center icons horizontally */
+}
+
+    .social-media-links a {
+        margin-right: 20px; /* Space between icons */
+    }
+
+    .social-media-links img {
+        width: 40px; /* Icon size */
+    }

@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "About";
+}
+
+<header class="about-header">
+    <div class="header-content">
+        <h1>About Paul K.A. Music Production</h1>
+        <p>Empowering creators with exceptional music that inspires and enhances their projects.</p>
+    </div>
+</header>
+
+<nav>
+    <ul class="nav-links">
+        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li><a asp-controller="Home" asp-action="Licensing">Licensing</a></li>
+        <li><a asp-controller="Home" asp-action="MusicCatalog">Music Catalog</a></li>
+        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <!-- Our Story Section -->
+    <section class="about-section">
+        <h2>Our Story</h2>
+        <p>
+            Paul K.A. Music Production was born out of a challenging yet transformative time—the global pandemic of 2020.
+            During this period, Paul K.A., an accomplished electronic music producer, decided to channel his creativity
+            into a project that would not only showcase his talent but also provide a valuable resource for creators
+            in need of high-quality music.
+        </p>
+        <p>
+            Over the years, Paul has written more than 200 electronic music tracks, ranging from ambient soundscapes
+            to high-energy dance anthems. His dedication to crafting unique and versatile compositions has made his work
+            a favorite among filmmakers, advertisers, and game developers alike.
+        </p>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <h2>The Team</h2>
+
+        <!-- Team Member: Paul K.A. -->
+        <div class="team-member">
+            <img src="/images/PaulKA.jpg" alt="Paul K.A." />
+            <div class="bio">
+                <h3>Paul K.A.</h3>
+                <p class="role">Founder & Lead Producer</p>
+                <p>Paul is the driving force behind this project, with over 15 years of experience creating soundtracks that inspire and captivate audiences worldwide.</p>
+            </div>
+        </div>
+
+        <!-- Team Member: Saul Before -->
+        <div class="team-member">
+            <img src="/images/Saul Before.jpg" alt="Saul Before" />
+            <div class="bio">
+                <h3>Saul Before</h3>
+                <p class="role">Contributing Artist</p>
+                <p>Saul brings a bold edge to the catalog as a contributing artist, with expertise in genres like punk rock, southern metal, and alternative styles.</p>
+            </div>
+        </div>
+
+        <!-- Team Summary -->
+        <p class="team-summary">
+            Together, Paul and Saul have created a dynamic partnership that blends electronic innovation with gritty rock authenticity. Their combined efforts have resulted in a catalog of over 250 tracks—each one crafted with care and designed to elevate your creative projects.
+        </p>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <h2>Our Mission</h2>
+        <p>
+            At Paul K.A. Music Production, our mission is simple: to empower creators with exceptional music that inspires
+            and enhances their projects. Whether you’re working on an indie film, a video game, or a commercial campaign,
+            we’re here to provide you with tracks that resonate with your audience and bring your vision to life.
+        </p>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="call-to-action">
+        <h2>Explore Our Catalog</h2>
+        <p>Discover the perfect track for your next project by browsing our extensive music catalog today.</p>
+        <a href="@Url.Action("MusicCatalog", "Home")" class="button">View Catalog</a>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Paul K.A. Professional Music Production. All rights reserved.</p>
+</footer>
+
+@section Styles {
+    <link rel="stylesheet" href="/css/about.css" />
+}

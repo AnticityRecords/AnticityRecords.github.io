@@ -1,0 +1,113 @@
+﻿/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #121212; /* Very dark gray background */
+    color: white;
+}
+
+/* Header Styling with Background Image (Homepage Only) */
+header {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px; /* Increased padding for breathing room */
+    background: url('/images/studio1.jpg') no-repeat center center/cover; /* Background image */
+    color: white;
+}
+
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay for readability */
+        z-index: 1; /* Ensure overlay sits on top of the image */
+    }
+
+    header h1,
+    header p {
+        position: relative; /* Ensure text is above the overlay */
+        z-index: 2; /* Higher z-index than the overlay */
+    }
+
+    header h1 {
+        font-size: 2.5em;
+        margin: 0;
+        line-height: 1.4; /* Adjusted line height for better spacing */
+    }
+
+    header p {
+        font-size: 1.2em;
+        margin-top: 20px; /* Added space below the headline */
+    }
+
+/* Navigation Bar Styling (Shared Across Pages) */
+nav ul {
+    list-style: none;
+    padding: 10px 0; /* Added padding to separate nav from other elements */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+    nav ul li {
+        margin: 0 20px; /* Increased spacing between nav items */
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #E03FD8; /* Accent color for links */
+        }
+
+/* Main Content Styling (Homepage Only) */
+main {
+    padding: 40px 20px; /* Increased padding around main content */
+}
+
+    main section {
+        margin-bottom: 60px; /* Increased space between sections */
+    }
+
+.catalog-section,
+.licensing-section,
+.cta-section {
+    max-width: 800px;
+    margin: 0 auto; /* Center-align sections on the page */
+}
+
+main h2 {
+    font-size: 2em;
+}
+
+main p {
+    font-size: 1.1em;
+}
+
+/* Buttons (Shared Across Pages) */
+.button {
+    display: inline-block;
+    padding: 12px 24px; /* Larger buttons for better usability */
+    margin-top: 20px; /* Space above buttons */
+    background-color: #6c63ff; /* Accent color for buttons */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+    .button:hover {
+        background-color: #5448d4; /* Darker shade on hover */
+    }
+
+.large-button {
+    font-size: 1.2em; /* Larger font size for call-to-action button */
+}
+
+/* Footer Styling (Shared Across Pages) */
+footer {
+    text-align: center;
+    padding: 30px 0; /* Increased padding for better separation from content above */
+    background: linear-gradient(to bottom, #121212, #6c63ff); /* Gradient for footer */
+}

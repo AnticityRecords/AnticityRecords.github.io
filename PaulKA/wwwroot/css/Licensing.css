@@ -1,0 +1,109 @@
+﻿/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color for readability */
+}
+
+/* Gradient Header Styling */
+.header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #6c63ff, #E03FD8); /* Gradient background */
+}
+
+    .header h1 {
+        font-size: 2.8em; /* Larger font size for emphasis */
+        color: white; /* Ensure text is readable against gradient */
+    }
+
+/* Navigation Links */
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Center navigation links horizontally */
+}
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+        nav ul li a {
+            color: #e0e0e0; /* Light text color for links */
+            text-decoration: none;
+        }
+
+            nav ul li a:hover {
+                color: #6c63ff; /* Accent color on hover */
+            }
+
+/* Licensing Options Section */
+.licensing-options {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+    .licensing-options h2 {
+        font-size: 2em;
+    }
+
+.card-container {
+    display: flex; /* Enable horizontal alignment */
+    justify-content: space-evenly; /* Space cards evenly across the row */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.card {
+    background-color: #1e1e1e; /* Dark card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    padding: 20px;
+    width: 300px; /* Fixed width for consistency */
+    margin: 10px; /* Spacing between cards */
+}
+
+    .card.featured {
+        border: 2px solid #6c63ff; /* Highlight featured card */
+    }
+
+    .card h3 {
+        font-size: 1.5em;
+    }
+
+    .card .price {
+        font-size: 1.8em;
+    }
+
+    .card ul li {
+        margin-bottom: 10px;
+    }
+
+    .card .button {
+        display: block;
+        margin-top: 20px;
+        padding: 12px 24px;
+        background-color: #6c63ff; /* Accent color for button */
+        color: white;
+    }
+
+        .card .button:hover {
+            background-color: #5448d4; /* Slightly darker shade on hover */
+        }
+
+/* Call-to-Action Section Buttons */
+.cta-section .button.secondary-button {
+    background-color: transparent; /* Secondary button style */
+    border: 2px solid #6c63ff;
+}
+
+    .cta-section .button.secondary-button:hover {
+        background-color: #6c63ff; /* Filled on hover */
+    }
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+}

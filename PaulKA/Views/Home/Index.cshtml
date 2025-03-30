@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<header>
+    <h1>
+        Welcome to Paul K.A.<br />
+        Professional Music Production
+    </h1>
+    <p>Your one-stop destination for music licensing for Film, Television, Commercials, and Video Games.</p>
+</header>
+<nav>
+    <ul>
+        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li><a asp-controller="Home" asp-action="About">About</a></li>
+        <li><a asp-controller="Home" asp-action="MusicCatalog">Music Catalog</a></li>
+        <li><a asp-controller="Home" asp-action="Licensing">Licensing</a></li>
+        <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+    </ul>
+</nav>
+<main>
+    <!-- Section 1 -->
+    <section class="catalog-section">
+        <h2>Discover Our Music Catalog</h2>
+        <p>Explore a wide range of professionally produced tracks that are perfect for your next project.</p>
+        <a href="@Url.Action("Index", "MusicCatalog")" class="button">View Catalog</a>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="licensing-section">
+        <h2>Licensing Made Easy</h2>
+        <p>Choose from Standard, Professional, or Commercial licenses tailored to your needs.</p>
+        <a href="@Url.Action("Index", "Licensing")" class="button">Learn More</a>
+    </section>
+
+    <!-- Section CTA -->
+    <section class="cta-section">
+        <h2>Ready to Elevate Your Project?</h2>
+        <p>Browse our catalog today and find the perfect track to bring your creative vision to life.</p>
+        <a href="@Url.Action("Index", "MusicCatalog")" class="button large-button">Get Started Now</a>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Paul K.A. Professional Music Production. All rights reserved.</p>
+</footer>

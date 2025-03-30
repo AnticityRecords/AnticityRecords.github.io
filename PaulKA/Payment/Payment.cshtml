@@ -1,0 +1,30 @@
+public class Payment : Controller
+{
+    private readonly ApplicationDbContext _context;
+    private readonly IPaymentService _paymentService;
+
+    // Modify the constructor to accept the payment service
+    public Payment(ApplicationDbContext context, IPaymentService paymentService)
+    {
+        _context = context;
+        _paymentService = paymentService;
+    }
+
+    [HttpGet("success")]
+    public async Task<IActionResult> Success(string sessionId)
+    {
+        // Implementation here
+    }
+
+    [HttpGet("cancel")]
+    public async Task<IActionResult> Cancel(string sessionId)
+    {
+        // Implementation here
+    }
+
+    [HttpPost("create-checkout-session")]
+    public IActionResult CreateCheckoutSession(string licenseType)
+    {
+        // Implementation here
+    }
+}

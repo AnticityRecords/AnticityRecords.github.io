@@ -1,0 +1,99 @@
+﻿/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: white;
+}
+
+/* Header Styling */
+.about-header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #6c63ff, #3f3d56);
+}
+
+    .about-header h1 {
+        font-size: 2.5em;
+    }
+
+    .about-header p {
+        font-size: 1.3em;
+    }
+
+/* Navigation Links */
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+    .nav-links li {
+        margin: 0 15px;
+    }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #E03FD8; /* Accent color */
+        }
+
+            .nav-links li a:hover {
+                color: #B947B1; /* Darker shade on hover */
+            }
+
+/* About Section */
+.about-section {
+    text-align: left; /* Left-aligned text for readability */
+    padding: 40px 20px;
+}
+
+    .about-section h2 {
+        font-size: 2em;
+    }
+
+    .about-section p {
+        font-size: 1.1em;
+    }
+
+/* Team Section */
+.team-section {
+    text-align: center;
+}
+
+.team-member {
+    display: flex; /* Align image and bio horizontally */
+    align-items: center; /* Vertically align content */
+    margin-bottom: 30px;
+}
+
+    .team-member img {
+        border-radius: 50%; /* Circular images */
+        width: 150px; /* Larger size for images */
+    }
+
+.bio {
+    margin-left: 20px;
+    text-align: left;
+}
+
+    .bio h3 {
+        font-size =2em; /* Larger font size for artist names */
+        color: white;
+        margin-bottom =5px;
+    }
+
+}
+
+.bio .role {
+    font-size =150%;
+    color: #E03FD8;
+}
+/* Purple accent color for roles*/
+
+/* Mission Section */
+.mission-section h2 {
+    font-size =150%;
+}
